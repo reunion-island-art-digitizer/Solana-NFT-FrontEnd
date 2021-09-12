@@ -433,6 +433,20 @@
                 background: transparent;
             }
             
+            #myProgress {
+                width: 100%;
+                background-color: #ddd;
+            }
+            
+            #myBar {
+                width: 10%;
+                height: 30px;
+                background-color: #04AA6D;
+                text-align: center;
+                line-height: 30px;
+                color: white;
+            }
+            
             @media (max-width: 767px) {
                 .version {
                     transform: scale(0.6) rotate(45deg);
@@ -506,18 +520,22 @@
                             <div class="col-md-4"><img src="assets/images/MINT SECTION PIC.jpg" style="width: 284px!important;">
                             </div>
                             <div class="col-md-8">
-                                <div style="text-align: center; border-bottom: solid 2px white; padding-top: 32px;">
+                                <div style="text-align: center; border-bottom: solid 2px white;  height: 20%; padding-top: 12px;">
                                     Each rapscallions costs just 0.06ETH to mint.</div>
-                                <div class="row" style="padding-top:45px;">
-                                    <div class="col-md-3" style="text-align: center;font-size: 18px;">0</div>
+                                <div style="display:flex; font-size: 25px;color: white; height: 20%;">
+                                    <div> Minted NFTs Amount</div>
+                                    <div class="mintedAmunt" style="margin-left:30px;text-align:center;font-size:25px; color: wheat;">0</div>
+                                </div>
+                                <div class="row" style=" height: 20%;">
+                                    <div class="col-md-3" id="ethBalance" style="text-align: center;font-size: 18px;">0</div>
                                     <div class="col-md-6" style="text-align: center;">ETH BALANCE</div>
                                     <div class="col-md-3"><button style="width: 100%;" class="connectbtn">CONNECT</button></div>
                                 </div>
-                                <div class="row" style="padding-top:45px;">
+                                <div class="row" style="height: 20%;">
                                     <div class="col-md-3" style="text-align: center;">
                                         <div class="row" style="display: flex; align-items: center;">
                                             <div class="col-md-5" style="text-align: right;">
-                                                <input type="text" value="0" style="font-size: 18px; border-radius: 3px;height: 30px; background-color: #444040; color: white; width: 48px;">
+                                                <input type="text" id="mintAmount" value="0" style="font-size: 18px; border-radius: 3px;height: 30px; background-color: #444040; color: white; width: 48px;">
                                             </div>
                                             <div class="col-md-7" style="padding-top: 5px;">Qty(Max.10)</div>
                                         </div>
@@ -525,12 +543,15 @@
                                     </div>
                                     <div class="col-md-6" style="padding-top: 5px; text-align: center; justify-content: space-between;">
                                         <span>Total Cost:</span>
-                                        <span style="font-size: 18px;">000</span>
+                                        <span class="nftCost" style="font-size: 18px;">000</span>
                                         <span>ETH</span>
                                     </div>
                                     <div class="col-md-3">
-                                        <button style="width: 100%;">BUY</button>
+                                        <button id="nftBuy" style="width: 100%;">BUY</button>
                                     </div>
+                                </div>
+                                <div id="myProgress" style="border-radius:10px;">
+                                    <div id="myBar">10%</div>
                                 </div>
                             </div>
 
@@ -752,8 +773,8 @@
                             </div>
                         </div>
 
-                        <a class="version" href="https://codepen.io/supah/pen/xxZMdNW" target="_parent">Vertical version</a>
-                        <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" id="family-slider" style="margin-top: 50px; position: relative;">
+                        <!-- <a class="version" href="https://codepen.io/supah/pen/xxZMdNW" target="_parent">Vertical version</a> -->
+                        <!-- <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" id="family-slider" style="margin-top: 50px; position: relative;">
 
                             <i class="gg-arrow-right" style="position:absolute;z-index:100;padding-top:125px; color:darkgrey; padding-left: 100%;"></i>
                             <i class="gg-arrow-left" style="position:absolute;z-index:100;padding-top:125px; color:darkgrey; "></i>
@@ -786,7 +807,7 @@
                                     <img src="assets/images/Slider10.jpg">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -908,263 +929,7 @@
                 </div>
             </footer>
         </div>
-        <script>
-            (function($) {
-                $.fn.countdown = function(options, callback) {
-                    //custom 'this' selector
-                    thisEl = $(this);
 
-                    // array of custom settings
-                    var settings = {
-                        'date': null,
-                        'format': null
-                    };
-
-                    // append the settings array to options
-                    if (options) {
-                        $.extend(settings, options);
-                    }
-
-                    //create the countdown processing function
-                    function countdown_proc() {
-                        var eventDate = Date.parse(settings.date) / 1000;
-                        var currentDate = Math.floor($.now() / 1000);
-
-                        if (eventDate <= currentDate) {
-                            callback.call(this);
-                            clearInterval(interval);
-                        }
-
-                        var seconds = eventDate - currentDate;
-
-                        var days = Math.floor(seconds / (60 * 60 * 24));
-                        //calculate the number of days
-
-                        seconds -= days * 60 * 60 * 24;
-                        //update the seconds variable with number of days removed
-
-                        var hours = Math.floor(seconds / (60 * 60));
-                        seconds -= hours * 60 * 60;
-                        //update the seconds variable with number of hours removed
-
-                        var minutes = Math.floor(seconds / 60);
-                        seconds -= minutes * 60;
-                        //update the seconds variable with number of minutes removed
-
-                        //conditional statements
-                        if (days == 1) {
-                            thisEl.find(".timeRefDays").text("day");
-                        } else {
-                            thisEl.find(".timeRefDays").text("days");
-                        }
-                        if (hours == 1) {
-                            thisEl.find(".timeRefHours").text("hour");
-                        } else {
-                            thisEl.find(".timeRefHours").text("hours");
-                        }
-                        if (minutes == 1) {
-                            thisEl.find(".timeRefMinutes").text("minute");
-                        } else {
-                            thisEl.find(".timeRefMinutes").text("minutes");
-                        }
-                        if (seconds == 1) {
-                            thisEl.find(".timeRefSeconds").text("second");
-                        } else {
-                            thisEl.find(".timeRefSeconds").text("seconds");
-                        }
-
-                        //logic for the two_digits ON setting
-                        if (settings.format == "on") {
-                            days = (String(days).length >= 2) ? days : "0" + days;
-                            hours = (String(hours).length >= 2) ? hours : "0" + hours;
-                            minutes = (String(minutes).length >= 2) ? minutes : "0" + minutes;
-                            seconds = (String(seconds).length >= 2) ? seconds : "0" + seconds;
-                        }
-
-                        //update the countdown's html values.
-                        thisEl.find(".days").text(days);
-                        thisEl.find(".hours").text(hours);
-                        thisEl.find(".minutes").text(minutes);
-                        thisEl.find(".seconds").text(seconds);
-                    }
-
-                    //run the function
-                    countdown_proc();
-
-                    //loop the function
-                    interval = setInterval(countdown_proc, 1000);
-                };
-
-            })(jQuery);
-
-
-
-            //Provide the plugin settings
-            $("#countdown").countdown({
-                    //The countdown end date
-                    date: "1 January 2022 12:00:00",
-
-                    // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
-                    format: "on"
-                },
-
-                function() {
-                    // This will run when the countdown ends
-                    alert("We're Out Now");
-                });
-
-
-            function setHeights() {
-                var windowHeight = $(window).height();
-                $('.slide').height(windowHeight);
-            }
-
-            setHeights();
-
-            $(window).resize(function() {
-                setHeights();
-            });
-
-            function addSticky() {
-                $('.slide').each(function() {
-                    var scrollerAnchor = $(this).offset().top;
-                    if (window.scrollY >= scrollerAnchor) {
-                        $(this).addClass('fix-it');
-                    } else {
-                        $(this).removeClass('fix-it');
-                    }
-                });
-            }
-
-            $(window).scroll(function() {
-                addSticky();
-            });
-        </script>
-
-
-        <script>
-            /*--------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Vars
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        --------------------*/
-            const $menu = document.querySelector('.menu')
-            const $items = document.querySelectorAll('.menu--item')
-            const $images = document.querySelectorAll('.menu--item img')
-            let menuWidth = $menu.clientWidth
-            let itemWidth = $items[0].clientWidth
-            let wrapWidth = $items.length * itemWidth
-
-            let scrollSpeed = 0
-            let oldScrollY = 0
-            let scrollY = 0
-            let y = 0
-
-
-            /*--------------------
-            Lerp
-            --------------------*/
-            const lerp = (v0, v1, t) => {
-                return v0 * (1 - t) + v1 * t
-            }
-
-
-            /*--------------------
-            Dispose
-            --------------------*/
-            const dispose = (scroll) => {
-                gsap.set($items, {
-                    x: (i) => {
-                        return i * itemWidth + scroll
-                    },
-                    modifiers: {
-                        x: (x, target) => {
-                            const s = gsap.utils.wrap(-itemWidth, wrapWidth - itemWidth, parseInt(x))
-                            return `${s}px`
-                        }
-                    }
-                })
-            }
-            dispose(0)
-
-
-            /*--------------------
-            Wheel
-            --------------------*/
-            const handleMouseWheel = (e) => {
-                scrollY -= e.deltaY * 0.9
-            }
-
-
-            /*--------------------
-            Touch
-            --------------------*/
-            let touchStart = 0
-            let touchX = 0
-            let isDragging = false
-            const handleTouchStart = (e) => {
-                touchStart = e.clientX || e.touches[0].clientX
-                isDragging = true
-                $menu.classList.add('is-dragging')
-            }
-            const handleTouchMove = (e) => {
-                if (!isDragging) return
-                touchX = e.clientX || e.touches[0].clientX
-                scrollY += (touchX - touchStart) * 2.5
-                touchStart = touchX
-            }
-            const handleTouchEnd = () => {
-                isDragging = false
-                $menu.classList.remove('is-dragging')
-            }
-
-
-            /*--------------------
-            Listeners
-            --------------------*/
-            $menu.addEventListener('mousewheel', handleMouseWheel)
-
-            $menu.addEventListener('touchstart', handleTouchStart)
-            $menu.addEventListener('touchmove', handleTouchMove)
-            $menu.addEventListener('touchend', handleTouchEnd)
-
-            $menu.addEventListener('mousedown', handleTouchStart)
-            $menu.addEventListener('mousemove', handleTouchMove)
-            $menu.addEventListener('mouseleave', handleTouchEnd)
-            $menu.addEventListener('mouseup', handleTouchEnd)
-
-            $menu.addEventListener('selectstart', () => {
-                return false
-            })
-
-
-            /*--------------------
-            Resize
-            --------------------*/
-            window.addEventListener('resize', () => {
-                menuWidth = $menu.clientWidth
-                itemWidth = $items[0].clientWidth
-                wrapWidth = $items.length * itemWidth
-            })
-
-
-            /*--------------------
-            Render
-            --------------------*/
-            const render = () => {
-                requestAnimationFrame(render)
-                y = lerp(y, scrollY, .1)
-                dispose(y)
-
-                scrollSpeed = y - oldScrollY
-                oldScrollY = y
-
-                gsap.to($items, {
-                    skewX: -scrollSpeed * .2,
-                    rotate: scrollSpeed * .01,
-                    scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * 0.003
-                })
-            }
-            render()
-        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script defer="defer" src="./assets/js/runtime.js"></script>
@@ -1172,7 +937,9 @@
         <script defer="defer" src="./assets/js/index-a0a45236f248e82cc148.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="./assets/js/scripts.js" type="text/javascript"></script>
+        <!-- <script src="./assets/js/scripts.js" type="text/javascript"></script> -->
+        <script src="./assets/js/operationW3.js" type="text/javascript"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.3-rc.0/web3.min.js"></script>
     </body>
 
