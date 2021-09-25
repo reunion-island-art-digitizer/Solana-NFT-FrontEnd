@@ -1,5 +1,5 @@
 // import web3 from 'web3'
-const totalAmount = 6666;
+const totalAmount = 10000;
 let mintedAmount = 198;
 
 window.addEventListener('load', function() {
@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
     $(".connectbtn").text("CONNECT");
     $(".mintedAmunt").text(restAmount + '/' + totalAmount);
     // Load WEB3
-    // Check wether it's already injected by something else (like Metamask or Parity Chrome plugin)
+    // Check wether it's already injected by something else (like Phantom or Parity Chrome plugin)
     // if (typeof web3 !== 'undefined') {
     //     window.web3 = new Web3(web3.currentProvider);
 
@@ -50,13 +50,13 @@ $("#nftBuy").on("click", function() {
     let cost = 0.0017;
     if (mintAmount > restAmount) {
         $("#nftBut").text("BUY");
-        $("#nftBut").attr(onclick, "window.location.href='https://Opensea.io';");
+        $("#nftBut").attr(onclick, "window.location.href='https://Solsea';");
         $("#mintAmount").val("0");
         $(".mintedAmunt").text("SOLD OUT");
 
 
     } else {
-        $("#nftBut").text("OPENSEA");
+        $("#nftBut").text("SOLSEA");
         $("#nftBut").removeAttr("onclick");
         console.log(parseFloat(cost) * parseInt(mintAmount));
         $(".nftCost").text(parseFloat(cost) * parseInt(mintAmount));

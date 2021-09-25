@@ -9,7 +9,7 @@
                         e.querySelector(".timer__date").innerHTML = [t.toFormat("LLLL dd"), `${t.toFormat("hh")} ${t.hour > 11 ? "PM" : "PA"} EST `].map((e => `<span>${e}</span>`)).join(""); const a = () => { const e = r.ou.local().setZone("America/New_York").diff(t, ["hours", "minutes", "seconds"]).toObject(); let a = 0,
                                 s = 0,
                                 o = 0; "number" == typeof e.hours && (a = Math.round(Math.abs(e.hours))), "number" == typeof e.minutes && (s = Math.round(Math.abs(e.minutes))), "number" == typeof e.seconds && (o = Math.round(Math.abs(e.seconds))), n.innerHTML = [a, s, o].map((e => e < 10 ? `0${e}` : e)).join(":") };
-                        a(), setInterval(a, 1e3) } } catch (e) { o.log(e) } if (document.getElementById("metamask-input")) { const e = document.getElementById("metamask-input");
+                        a(), setInterval(a, 1e3) } } catch (e) { o.log(e) } if (document.getElementById("phantom-input")) { const e = document.getElementById("phantom-input");
                     e.addEventListener("input", (() => { parseInt(e.value, 10) > parseInt("20", 10) && (e.value = "20"), parseInt(e.value, 10) < parseInt("1", 10) && (e.value = "1") })) } })) } },
     e => { "use strict";
         e.O(0, [736], (() => { return t = "2f54674dfd4dc112b34c", e(e.s = t); var t }));
