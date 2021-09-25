@@ -4,7 +4,7 @@
                 r = n("d440ef8bd5a90a1e2360"),
                 o = n("3063e477940dff4ab2af");
             a.Z.use([s.Z]), window.addEventListener("DOMContentLoaded", (async() => { if (null !== document.getElementById("family-slider")) { new a.Z("#family-slider", { speed: 400, loop: !0, spaceBetween: 10, autoplay: { delay: 3e3 }, slidesPerView: 1.5, centeredSlides: !0, breakpoints: { 600: { slidesPerView: 3 }, 1280: { slidesPerView: 5 } } }) } try { if (document.getElementById("timer")) { const e = document.getElementById("timer"),
-                            t = r.ou.fromFormat("17.08.2021 01:00", "dd.LL.yyyy HH:mm", { zone: "Europe/Moscow" }).setZone("America/New_York").setLocale("en"),
+                            t = r.ou.fromFormat("23.10.2021 09:00", "dd.LL.yyyy HH:mm", { zone: "Europe/Moscow" }).setZone("America/New_York").setLocale("en"),
                             n = e.querySelector(".timer__left");
                         e.querySelector(".timer__date").innerHTML = [t.toFormat("LLLL dd"), `${t.toFormat("hh")} ${t.hour > 11 ? "PM" : "PA"} EST `].map((e => `<span>${e}</span>`)).join(""); const a = () => { const e = r.ou.local().setZone("America/New_York").diff(t, ["hours", "minutes", "seconds"]).toObject(); let a = 0,
                                 s = 0,
