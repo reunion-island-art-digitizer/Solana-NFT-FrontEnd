@@ -2367,14 +2367,14 @@ input[type=number] {
 
 @media screen and (max-width:700px) {
     .timer__left {
-        font-size: 14px;
+        font-size: 25px;
         line-height: 40px
     }
 }
 
 .timer__date {
-    color: #ead696;
-    font-size: 17px;
+    color: #2f1307;
+    font-size: 25px;
     font-weight: 700;
     line-height: 40px;
     text-transform: uppercase
@@ -2382,7 +2382,7 @@ input[type=number] {
 
 @media screen and (max-width:700px) {
     .timer__date {
-        font-size: 15px;
+        font-size: 25px;
         line-height: 40px
     }
 }
@@ -2391,7 +2391,7 @@ input[type=number] {
     background: currentColor;
     content: "";
     display: inline-block;
-    height: 15px;
+    height: 25px;
     margin: 0 8px;
     width: 2px
 }
