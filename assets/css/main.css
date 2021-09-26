@@ -1283,7 +1283,7 @@ th {
 }
 
 :root {
-    --primary-brand-color: #2d6dba;
+    --primary-brand-color: #ba652d;
     --primary-brand-color-opacity-20: rgba(45, 109, 186, 0.2);
     --text-base: #222;
     --body-background: #101010;
@@ -1319,7 +1319,7 @@ body {
 
 .button {
     align-items: center;
-    background-color: #988036;
+    background-color: #cf7234;
     border-radius: 24px;
     color: #fff;
     cursor: pointer;
@@ -1772,7 +1772,7 @@ body {
     align-items: center;
     border: 2px solid #988036;
     border-radius: 50%;
-    color: #988036;
+    color: #cf7234;
     display: flex;
     font-size: 19px;
     font-weight: 700;
@@ -1813,13 +1813,13 @@ body {
     .section-roadmap .roadmap {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px 30px;
+        gap: 40px 40px;
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
         justify-items: center
     }
     .section-roadmap .roadmap div {
-        flex: 1 1 200px
+        flex: 1 1 250px
     }
     .section-roadmap .roadmap span:after,
     .section-roadmap .roadmap span:before {
@@ -1855,7 +1855,7 @@ body {
 }
 
 .advantages .advantag p {
-    color: #988036;
+    color: #cf7234;
     font-size: 22px;
     line-height: 28px;
     max-width: 250px
