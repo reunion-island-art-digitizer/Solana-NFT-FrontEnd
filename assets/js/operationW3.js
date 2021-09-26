@@ -34,12 +34,83 @@ window.addEventListener('load', function() {
 
 
 $(".connectbtn").on("click", async function () {
-    console.log(window.solana.isBlocto);
-// prints True
-    window.solana.on("connect", () => console.log("connected"))
-    window.solana.publicKey // wallet's publicKey
-    window.solana.connected // true or false
-    window.solana.network // mainnet-beta or testnet
+    /**
+  * Establish a JSON RPC connection
+  *
+  * @param endpoint URL to the fullnode JSON RPC endpoint
+  * @param commitmentOrConfig optional default commitment level or optional ConnectionConfig configuration object
+  */
+    constructor(
+        endpoint: string,
+        commitmentOrConfig ?: Commitment | ConnectionConfig,
+    ) {
+        let url = new URL(endpoint);
+        const useHttps = url.protocol === 'https:';
+
+        let wsEndpoint;
+        let httpHeaders;
+        let fetchMiddleware;
+        let disableRetryOnRateLimit;
+        if (commitmentOrConfig && typeof commitmentOrConfig === 'string') {
+            this._commitment = commitmentOrConfig;
+        } else if (commitmentOrConfig) {
+            this._commitment = commitmentOrConfig.commitment;
+            this._confirmTransactionInitialTimeout =
+                commitmentOrConfig.confirmTransactionInitialTimeout;
+            wsEndpoint = commitmentOrConfig.wsEndpoint;
+            httpHeaders = commitmentOrConfig.httpHeaders;
+            fetchMiddleware = commitmentOrConfig.fetchMiddleware;
+            disableRetryOnRateLimit = commitmentOrConfig.disableRetryOnRateLimit;
+        }
+
+        this._rpcEndpoint = endpoint;
+        this._rpcWsEndpoint = wsEndpoint || makeWebsocketUrl(endpoint);
+
+        this._rpcClient = createRpcClient(
+            url.toString(),
+            useHttps,
+            httpHeaders,
+            fetchMiddleware,
+            disableRetryOnRateLimit,
+        );
+        this._rpcRequest = createRpcRequest(this._rpcClient);
+        this._rpcBatchRequest = createRpcBatchRequest(this._rpcClient);
+
+        this._rpcWebSocket = new RpcWebSocketClient(this._rpcWsEndpoint, {
+            autoconnect: false,
+            max_reconnects: Infinity,
+        });
+        this._rpcWebSocket.on('open', this._wsOnOpen.bind(this));
+        this._rpcWebSocket.on('error', this._wsOnError.bind(this));
+        this._rpcWebSocket.on('close', this._wsOnClose.bind(this));
+        this._rpcWebSocket.on(
+            'accountNotification',
+            this._wsOnAccountNotification.bind(this),
+        );
+        this._rpcWebSocket.on(
+            'programNotification',
+            this._wsOnProgramAccountNotification.bind(this),
+        );
+        this._rpcWebSocket.on(
+            'slotNotification',
+            this._wsOnSlotNotification.bind(this),
+        );
+        this._rpcWebSocket.on(
+            'slotsUpdatesNotification',
+            this._wsOnSlotUpdatesNotification.bind(this),
+        );
+        this._rpcWebSocket.on(
+            'signatureNotification',
+            this._wsOnSignatureNotification.bind(this),
+        );
+        this._rpcWebSocket.on(
+            'rootNotification',
+            this._wsOnRootNotification.bind(this),
+        );
+        this._rpcWebSocket.on(
+            'logsNotification',
+            this._wsOnLogsNotification.bind(this),
+        );
     $("#solBalance").text(result);
     $(".connectbtn").text("CONNECTED");
 
