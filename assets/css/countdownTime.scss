@@ -5,10 +5,10 @@ $second: 27;
 $radius: 75px;
 $animation-timing: cubic-bezier(1,0,1,0);
 
-$color--active: rgba(#211b12, 0.0);
+$color--active: rgba(#1f1a11, 0.0);
 $color--inactive: rgba(#000, 0.2);
 
-$font-size: 35px;
+$font-size: 30px;
 
 $hourTens: floor($hour / 10);
 $hourOnes: $hour % 10;
@@ -216,7 +216,7 @@ ul {
   padding: 0;
   float: left;
   list-style-type: none;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
 
   &:nth-of-type(even) {
