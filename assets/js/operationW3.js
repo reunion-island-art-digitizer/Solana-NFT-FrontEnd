@@ -44,7 +44,7 @@ $("#nftBuy").on("click", function() {
     let cost = 0.0017;
     if (mintAmount > restAmount) {
         $("#nftBut").text("BUY");
-        $("#nftBut").attr(onclick, "window.location.href='https://Solsea';");
+        $("#nftBut").attr(onclick, "window.location.href='https://Solsea.io';");
         $("#mintAmount").val("0");
         $(".mintedAmunt").text("SOLD OUT");
 
