@@ -33,7 +33,7 @@ window.addEventListener('load', function() {
 });
 
 
-$(".connectbtn").on("click", async function () {
+$(".connectbtn") {
     import ConnectToPhantom from "../phantom-wallet-example/components/ConnectToPhantom";
 
     export default function Home() {
