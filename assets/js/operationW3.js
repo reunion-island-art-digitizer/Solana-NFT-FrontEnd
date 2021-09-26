@@ -34,8 +34,9 @@ window.addEventListener('load', function() {
 
 
 $(".connectbtn").on("click", async function () {
+    console.log(window.solana.isBlocto);
+// prints True
     window.solana.on("connect", () => console.log("connected"))
-
     window.solana.publicKey // wallet's publicKey
     window.solana.connected // true or false
     window.solana.network // mainnet-beta or testnet
