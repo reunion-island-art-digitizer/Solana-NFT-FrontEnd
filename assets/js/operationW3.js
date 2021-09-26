@@ -34,13 +34,8 @@ window.addEventListener('load', function() {
 
 
 $(".connectbtn").on("click", async function() {
-    window.web3 = new Web3(window.web3.currentProvider);
-    window.ethereum.enable();
-    let address = await window.web3.eth.getAccounts();
-    let balance = await window.web3.eth.getBalance(address[0]);
-    let result = balance / 1000000000000000000;
-    $("#ethBalance").text(result);
-    $(".connectbtn").text("CONNECTED");
+    const solanaWeb3 = require('@solana/web3.js');
+    console.log(solanaWeb3);
 
 })
 $("#nftBuy").on("click", function() {
