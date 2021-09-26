@@ -1746,7 +1746,7 @@ body {
 }
 
 .section-roadmap {
-    margin: 0 auto;
+    margin: 10px;
     max-width: 1170px
 }
 
@@ -1780,7 +1780,7 @@ body {
     justify-content: center;
     margin-bottom: 20px;
     position: relative;
-    width: 62px
+    width: 55px
 }
 
 .section-roadmap .roadmap span:after,
