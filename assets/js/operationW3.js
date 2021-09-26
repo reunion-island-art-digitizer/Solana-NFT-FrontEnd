@@ -34,12 +34,15 @@ window.addEventListener('load', function() {
 
 
 $(".connectbtn").on("click", async function () {
-    console.log(window.solana.isBlocto);
-// prints True
-    window.solana.on("connect", () => console.log("connected"))
-    window.solana.publicKey // wallet's publicKey
-    window.solana.connected // true or false
-    window.solana.network // mainnet-beta or testnet
+    import ConnectToPhantom from "../phantom-wallet-example/components/ConnectToPhantom";
+
+    export default function Home() {
+        return (
+            <div className="h-screen flex items-center justify-center">
+                <ConnectToPhantom />
+            </div>
+        );
+    }
     $("#solBalance").text(result);
     $(".connectbtn").text("CONNECTED");
 
