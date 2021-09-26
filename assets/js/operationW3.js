@@ -33,15 +33,19 @@ window.addEventListener('load', function() {
 });
 
 
-$(".connectbtn").on("click", async function () {
-    console.log(window.solana.isBlocto);
-// prints True
-    window.solana.on("connect", () => console.log("connected"))
-    window.solana.publicKey // wallet's publicKey
-    window.solana.connected // true or false
-    window.solana.network // mainnet-beta or testnet
-    $("#solBalance").text(result);
-    $(".connectbtn").text("CONNECTED");
+$(".connectbtn").on("click", export type ConnectionConfig = {
+    /** Optional commitment level */
+    commitment?: Commitment;
+    /** Optional endpoint URL to the fullnode JSON RPC PubSub WebSocket Endpoint */
+    wsEndpoint?: string;
+    /** Optional HTTP headers object */
+    httpHeaders?: HttpHeaders;
+    /** Optional fetch middleware callback */
+    fetchMiddleware?: FetchMiddleware;
+    /** Optional Disable retring calls when server responds with HTTP 429 (Too Many Requests) */
+    disableRetryOnRateLimit?: boolean;
+    /** time to allow for the server to initially process a transaction (in milliseconds) */
+    confirmTransactionInitialTimeout?: number;
 
 })
 $("#nftBuy").on("click", function() {
