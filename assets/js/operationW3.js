@@ -33,9 +33,15 @@ window.addEventListener('load', function() {
 });
 
 
-$(".connectbtn").on("click", async function() {
-    const solanaWeb3 = require('/assets/js/node_modules/@solana/web3.js');
-console.log(solanaWeb3);
+$(".connectbtn").on("click", async function () {
+    window.web3 = new Web3(window.web3.currentProvider);
+    window.solana.enable();
+    let address = await window.web3.sol.getAccounts();
+    let balance = await window.web3.sol.getBalance(address[0]);
+    let result = balance / 1000000000000000000;
+    $("#ethBalance").text(result);
+    $(".connectbtn").text("CONNECTED");
+
 })
 $("#nftBuy").on("click", function() {
 
