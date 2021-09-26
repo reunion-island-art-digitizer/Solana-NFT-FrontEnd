@@ -34,9 +34,8 @@ window.addEventListener('load', function() {
 
 
 $(".connectbtn").on("click", async function() {
-    const solanaWeb3 = require('@solana/web3.js');
+    // `solanaWeb3` is provided in the global namespace by the `solanaWeb3.min.js` script bundle.
     console.log(solanaWeb3);
-
 })
 $("#nftBuy").on("click", function() {
 
