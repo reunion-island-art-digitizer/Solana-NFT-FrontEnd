@@ -2356,7 +2356,7 @@ input[type=number] {
     background: #ead696;
     border-radius: 18px;
     color: #101010;
-    font-size: 25px;
+    font-size: 17px;
     font-weight: 700;
     height: 36px;
     justify-content: center;
@@ -2367,14 +2367,14 @@ input[type=number] {
 
 @media screen and (max-width:700px) {
     .timer__left {
-        font-size: 25px;
+        font-size: 14px;
         line-height: 40px
     }
 }
 
 .timer__date {
     color: #2f1307;
-    font-size: 25px;
+    font-size: 17px;
     font-weight: 700;
     line-height: 40px;
     text-transform: uppercase
@@ -2382,7 +2382,7 @@ input[type=number] {
 
 @media screen and (max-width:700px) {
     .timer__date {
-        font-size: 25px;
+        font-size: 15px;
         line-height: 40px
     }
 }
@@ -2391,7 +2391,7 @@ input[type=number] {
     background: currentColor;
     content: "";
     display: inline-block;
-    height: 25px;
+    height: 15px;
     margin: 0 8px;
     width: 2px
 }
