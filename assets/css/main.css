@@ -20,14 +20,14 @@
 }
 
 :root {
-    --swiper-theme-color: #007aff;
+    --swiper-theme-color: #cf7234;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
 .fa,
 .fas {
     width: 70px;
-    color: blue;
+    color: darkorange;
 }
 
 .menu {
@@ -154,7 +154,7 @@
 
 #myProgress {
     width: 100%;
-    background-color: #ddd;
+    background-color: #ead696;
 }
 
 #myBar {
@@ -163,7 +163,7 @@
     background-color: #04AA6D;
     text-align: center;
     line-height: 30px;
-    color: white;
+    color: black;
 }
 
 .accordion-item {
@@ -389,7 +389,7 @@ body .main #content section p.timedescription {
 }
 
 button {
-    background-color: #0078d0;
+    background-color: #cf7234;
     border: 0;
     border-radius: 56px;
     color: #fff;
