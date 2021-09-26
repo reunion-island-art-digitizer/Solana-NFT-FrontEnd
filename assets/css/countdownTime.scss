@@ -8,7 +8,7 @@ $animation-timing: cubic-bezier(1,0,1,0);
 $color--active: rgba(#1f1a11, 0.0);
 $color--inactive: rgba(#000, 0.2);
 
-$font-size: 70px;
+$font-size: 35px;
 
 $hourTens: floor($hour / 10);
 $hourOnes: $hour % 10;
