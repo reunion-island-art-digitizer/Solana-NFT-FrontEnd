@@ -150,7 +150,14 @@ var x = setInterval(function() {
                                 <div class="row" style=" height: 20%;">
                                     <div class="col-md-3" id="solBalance" style="text-align: center;font-size: 18px;">0</div>
                                     <div class="col-md-6" style="text-align: center;">SOL BALANCE</div>
-                                    <div class="col-md-3"><button style="width: 100%;" class="connectbtn">CONNECT</button></div>
+                                    <div import ConnectToPhantom from "./phantom-wallet-example/components/ConnectToPhantom.tsx" ;
+                                         export default function Home() {
+                                         return (
+            <div className="h-screen flex items-center justify-center">
+                <ConnectToPhantom />
+            </div>
+        );
+    }</div>
                                 </div>
                                 <div class="row" style="height: 20%;">
                                     <div class="col-md-3" style="text-align: center;">
