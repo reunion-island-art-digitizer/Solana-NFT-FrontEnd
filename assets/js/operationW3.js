@@ -34,74 +34,12 @@ window.addEventListener('load', function() {
 
 
 $(".connectbtn").on("click", async function () {
-    /**
- * A connection to a fullnode JSON RPC endpoint
- */
-    export class Connection {
-  /** @internal */ _commitment?: Commitment;
-  /** @internal */ _confirmTransactionInitialTimeout?: number;
-  /** @internal */ _rpcEndpoint: string;
-  /** @internal */ _rpcWsEndpoint: string;
-  /** @internal */ _rpcClient: RpcClient;
-  /** @internal */ _rpcRequest: RpcRequest;
-  /** @internal */ _rpcBatchRequest: RpcBatchRequest;
-  /** @internal */ _rpcWebSocket: RpcWebSocketClient;
-  /** @internal */ _rpcWebSocketConnected: boolean = false;
-  /** @internal */ _rpcWebSocketHeartbeat: ReturnType<
-        typeof setInterval
-    > | null = null;
-  /** @internal */ _rpcWebSocketIdleTimeout: ReturnType<
-        typeof setTimeout
-    > | null = null;
-
-  /** @internal */ _disableBlockhashCaching: boolean = false;
-  /** @internal */ _pollingBlockhash: boolean = false;
-  /** @internal */ _blockhashInfo: {
-        recentBlockhash: Blockhash | null;
-        lastFetch: number;
-        simulatedSignatures: Array<string>;
-        transactionSignatures: Array<string>;
-    } = {
-                recentBlockhash: null,
-                lastFetch: 0,
-                transactionSignatures: [],
-                simulatedSignatures: [],
-            };
-
-  /** @internal */ _accountChangeSubscriptionCounter: number = 0;
-  /** @internal */ _accountChangeSubscriptions: {
-                [id: number]: AccountSubscriptionInfo;
-            } = {};
-
-  /** @internal */ _programAccountChangeSubscriptionCounter: number = 0;
-  /** @internal */ _programAccountChangeSubscriptions: {
-                [id: number]: ProgramAccountSubscriptionInfo;
-            } = {};
-
-  /** @internal */ _rootSubscriptionCounter: number = 0;
-  /** @internal */ _rootSubscriptions: {
-                [id: number]: RootSubscriptionInfo;
-            } = {};
-
-  /** @internal */ _signatureSubscriptionCounter: number = 0;
-  /** @internal */ _signatureSubscriptions: {
-                [id: number]: SignatureSubscriptionInfo;
-            } = {};
-
-  /** @internal */ _slotSubscriptionCounter: number = 0;
-  /** @internal */ _slotSubscriptions: {
-                [id: number]: SlotSubscriptionInfo;
-            } = {};
-
-  /** @internal */ _logsSubscriptionCounter: number = 0;
-  /** @internal */ _logsSubscriptions: {
-                [id: number]: LogsSubscriptionInfo;
-            } = {};
-
-  /** @internal */ _slotUpdateSubscriptionCounter: number = 0;
-  /** @internal */ _slotUpdateSubscriptions: {
-                [id: number]: SlotUpdateSubscriptionInfo;
-            } = {};
+    console.log(window.solana.isBlocto);
+// prints True
+    window.solana.on("connect", () => console.log("connected"))
+    window.solana.publicKey // wallet's publicKey
+    window.solana.connected // true or false
+    window.solana.network // mainnet-beta or testnet
     $("#solBalance").text(result);
     $(".connectbtn").text("CONNECTED");
 
