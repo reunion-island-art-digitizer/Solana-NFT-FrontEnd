@@ -34,7 +34,7 @@ window.addEventListener('load', function() {
 
 
 $(".connectbtn").on("click", async function() {
-    const solanaWeb3 = require('@solana/web3.js');
+    const solanaWeb3 = require('/assets/js/node_modules/@solana/web3.js');
 console.log(solanaWeb3);
 })
 $("#nftBuy").on("click", function() {
