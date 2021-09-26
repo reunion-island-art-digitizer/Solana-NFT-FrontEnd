@@ -33,7 +33,7 @@ window.addEventListener('load', function() {
 });
 
 
-$(".connectbtn").{
+$(".connectbtn")
     import { ConnectToPhantom } from "./phantom-wallet-example/components/ConnectToPhantom";
     export default function Home() {
         return (
@@ -41,7 +41,7 @@ $(".connectbtn").{
                 <ConnectToPhantom />
             </div>
         );
-    }
+    
     $("#solBalance").text(result);
     $(".connectbtn").text("CONNECTED");
 
