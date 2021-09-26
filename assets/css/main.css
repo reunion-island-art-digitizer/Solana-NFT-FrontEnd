@@ -189,10 +189,10 @@
     font-weight: 700;
     color: #313133;
     background: #cf7234;
-    background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, darkorange 100%);
+    background: linear-gradient(90deg, rgb(242 199 122) 0%, darkorange 100%);
     border: none;
     border-radius: 1000px;
-    box-shadow: 12px 12px 24px rgb(177 90 7 / 0,64);
+    box-shadow: 12px 12px 24px darkorange;
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
     outline: none;
