@@ -1746,15 +1746,15 @@ body {
 }
 
 .section-roadmap {
-    margin: 10px;
-    max-width: 1170px
+    margin: auto;
+    max-width: 1200px
 }
 
 .section-roadmap .roadmap {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
-    padding: 0 72px
+    padding: 0 50px
 }
 
 .section-roadmap .roadmap div {
