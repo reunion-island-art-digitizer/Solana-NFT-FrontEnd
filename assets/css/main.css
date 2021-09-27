@@ -20,14 +20,14 @@
 }
 
 :root {
-    --swiper-theme-color: #cf7234;
+    --swiper-theme-color: #007aff;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
 .fa,
 .fas {
     width: 70px;
-    color: darkorange;
+    color: blue;
 }
 
 .menu {
@@ -154,7 +154,7 @@
 
 #myProgress {
     width: 100%;
-    background-color: #ead696;
+    background-color: #ddd;
 }
 
 #myBar {
@@ -163,7 +163,7 @@
     background-color: #04AA6D;
     text-align: center;
     line-height: 30px;
-    color: black;
+    color: white;
 }
 
 .accordion-item {
@@ -188,11 +188,11 @@
     letter-spacing: 1.3px;
     font-weight: 700;
     color: #313133;
-    background: #cf7234;
-    background: linear-gradient(90deg, rgb(242 199 122) 0%, darkorange 100%);
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
     border: none;
     border-radius: 1000px;
-    box-shadow: 12px 12px 24px darkorange;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
     outline: none;
@@ -389,7 +389,7 @@ body .main #content section p.timedescription {
 }
 
 button {
-    background-color: #cf7234;
+    background-color: #0078d0;
     border: 0;
     border-radius: 56px;
     color: #fff;
@@ -1283,7 +1283,7 @@ th {
 }
 
 :root {
-    --primary-brand-color: #ba652d;
+    --primary-brand-color: #2d6dba;
     --primary-brand-color-opacity-20: rgba(45, 109, 186, 0.2);
     --text-base: #222;
     --body-background: #101010;
@@ -1319,7 +1319,7 @@ body {
 
 .button {
     align-items: center;
-    background-color: #cf7234;
+    background-color: #988036;
     border-radius: 24px;
     color: #fff;
     cursor: pointer;
@@ -1746,15 +1746,15 @@ body {
 }
 
 .section-roadmap {
-    margin: auto;
-    max-width: 1200px
+    margin: 0 auto;
+    max-width: 1170px
 }
 
 .section-roadmap .roadmap {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
-    padding: 0 50px
+    padding: 0 72px
 }
 
 .section-roadmap .roadmap div {
@@ -1772,7 +1772,7 @@ body {
     align-items: center;
     border: 2px solid #988036;
     border-radius: 50%;
-    color: #cf7234;
+    color: #988036;
     display: flex;
     font-size: 19px;
     font-weight: 700;
@@ -1780,7 +1780,7 @@ body {
     justify-content: center;
     margin-bottom: 20px;
     position: relative;
-    width: 55px
+    width: 62px
 }
 
 .section-roadmap .roadmap span:after,
@@ -1813,13 +1813,13 @@ body {
     .section-roadmap .roadmap {
         display: flex;
         flex-wrap: wrap;
-        gap: 40px 40px;
+        gap: 30px 30px;
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
         justify-items: center
     }
     .section-roadmap .roadmap div {
-        flex: 1 1 250px
+        flex: 1 1 200px
     }
     .section-roadmap .roadmap span:after,
     .section-roadmap .roadmap span:before {
@@ -1855,7 +1855,7 @@ body {
 }
 
 .advantages .advantag p {
-    color: #cf7234;
+    color: #988036;
     font-size: 22px;
     line-height: 28px;
     max-width: 250px
@@ -1914,9 +1914,9 @@ details>summary {
 
 .accordion-item__header {
     align-items: center;
-    border: 1px solid #cf7234;
+    border: 1px solid #988036;
     border-radius: 3px;
-    color: #cf7234;
+    color: #988036;
     cursor: pointer;
     display: flex;
     font-size: 17px;
@@ -1989,7 +1989,7 @@ details>summary {
 .section-gang .section-content p a,
 .section-gang .section .section-content .cool-raccoon p a,
 .section .section-content .section-gang .cool-raccoon p a {
-    color: #cf7234;
+    color: #988036;
     transition: all .2s ease-in-out
 }
 
@@ -2024,7 +2024,7 @@ details>summary {
 }
 
 .section-gang .raccoons .raccoon b {
-    color: #cf7234;
+    color: #988036;
     font-family: Stardos Stencil, sans-serif;
     font-size: 17px;
     font-weight: 700;
@@ -2109,7 +2109,7 @@ details>summary {
 .footer .container .social-media li a,
 .footer .header-container .social-media li a {
     align-items: center;
-    color: #cf7234;
+    color: #988036;
     display: flex;
     height: 48px;
     padding-left: 0
@@ -2265,7 +2265,7 @@ details>summary {
 }
 
 .section.section-mint .section-content p span {
-    color: #cf7234;
+    color: #988036;
     font-weight: 700
 }
 
@@ -2373,7 +2373,7 @@ input[type=number] {
 }
 
 .timer__date {
-    color: #2f1307;
+    color: #ead696;
     font-size: 17px;
     font-weight: 700;
     line-height: 40px;

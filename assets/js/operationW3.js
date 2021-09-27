@@ -33,9 +33,13 @@ window.addEventListener('load', function() {
 });
 
 
-$(".connectbtn").
-    
-    $("#solBalance").text(result);
+$(".connectbtn").on("click", async function() {
+    window.web3 = new Web3(window.web3.currentProvider);
+    window.ethereum.enable();
+    let address = await window.web3.eth.getAccounts();
+    let balance = await window.web3.eth.getBalance(address[0]);
+    let result = balance / 1000000000000000000;
+    $("#ethBalance").text(result);
     $(".connectbtn").text("CONNECTED");
 
 })
@@ -43,10 +47,10 @@ $("#nftBuy").on("click", function() {
 
     let restAmount = 2000;
     let mintAmount = $("#mintAmount").val();
-    let cost = 0.05;
+    let cost = 0.0017;
     if (mintAmount > restAmount) {
         $("#nftBut").text("BUY");
-        $("#nftBut").attr(onclick, "window.location.href='https://Solsea.io';");
+        $("#nftBut").attr(onclick, "window.location.href='https://Solsea';");
         $("#mintAmount").val("0");
         $(".mintedAmunt").text("SOLD OUT");
 
