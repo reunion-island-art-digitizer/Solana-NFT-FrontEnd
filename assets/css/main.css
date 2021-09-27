@@ -183,7 +183,7 @@
     min-width: 300px;
     min-height: 60px;
     font-family: 'Nunito', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
@@ -389,7 +389,7 @@ body .main #content section p.timedescription {
 }
 
 button {
-    background-color: #0078d0;
+    background-color: #ed8404;
     border: 0;
     border-radius: 56px;
     color: #fff;
@@ -2373,7 +2373,7 @@ input[type=number] {
 }
 
 .timer__date {
-    color: #ead696;
+    color: #101010;
     font-size: 17px;
     font-weight: 700;
     line-height: 40px;
