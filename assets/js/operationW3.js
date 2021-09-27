@@ -34,13 +34,6 @@ window.addEventListener('load', function() {
 
 
 $(".connectbtn").
-    import { ConnectToPhantom } from "./phantom-wallet-example/components/ConnectToPhantom";
-    export default function Home() {
-        return (
-            <div className="h-screen flex items-center justify-center">
-                <ConnectToPhantom />
-            </div>
-        );
     
     $("#solBalance").text(result);
     $(".connectbtn").text("CONNECTED");
