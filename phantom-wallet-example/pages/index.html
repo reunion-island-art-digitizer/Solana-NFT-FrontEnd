@@ -4,7 +4,15 @@
 <head>
 <head/>
 <body>
+import ConnectToPhantom from "../phantom-wallet-example/components/ConnectToPhantom";
 
+export default function Home() {
+  return (
+    <div className="h-screen flex items-center justify-center">
+      <ConnectToPhantom />
+    </div>
+  );
+}
     <script src="~/phantom-wallet-example/components/ConnectToPhantom.tsx"></script>
 
 </body>
