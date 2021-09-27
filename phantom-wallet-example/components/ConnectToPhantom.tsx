@@ -9,7 +9,7 @@ interface Phantom {
 }
 
 const ConnectToPhantom = () => {
-    const [phantom, setPhantom] = useState < Phantom | null > (null);
+    const [phantom, setPhantom] = useState<Phantom | null>(null);
 
     useEffect(() => {
         if ("solana" in window) {
