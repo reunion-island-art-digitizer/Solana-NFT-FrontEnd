@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\.git\\refs\\remotes",
-    "\\.git\\refs\\remotes\\origin",
-    "\\.git\\refs\\tags",
-    "\\assets",
-    "\\public",
-    "\\src",
-    "\\src\\components",
-    "\\src\\components\\ConnectWalletButton",
-    "\\src\\components\\Modal"
+    ""
   ],
-  "SelectedNode": "\\public\\index.html",
+  "SelectedNode": "\\assets",
   "PreviewInSolutionExplorer": false
 }
