@@ -183,7 +183,7 @@
     min-width: 300px;
     min-height: 60px;
     text-align: center;
-    font-family: 'Nunito', sans-serif; 
+    font-family: 'Nunito', bold; 
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
@@ -1359,9 +1359,19 @@ body {
     gap: var(--gutter);
     grid-template-columns: 263px auto;
     position: fixed;
-    background-color: #261304 50%;
-    border-radius: 24px;
-    padding: 0 72px
+    padding: 0 72px;
+    min-width: 300px;
+    min-height: 60px;
+    background: rgba(255, 255, 255, .2);
+    background: linear-gradient(90deg, #c9c9c9 0%, #c9c9c9 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px #101010;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
 }
 
 .header-navigation ul {
