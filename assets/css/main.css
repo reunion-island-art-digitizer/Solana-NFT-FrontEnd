@@ -1360,10 +1360,9 @@ body {
     grid-template-columns: 263px auto;
     position: fixed;
     padding: 0 72px;
-    min-width: 170px;
-    min-height: 30px;
-    background: #000000;
-    background: linear-gradient(90deg, #000000 0%, #000000 100%);
+    min-width: 100px;
+    min-height: 20px;
+    background: #000000 50%;
     border: none;
     border-radius: 1000px;
     box-shadow: 12px 12px 24px #101010;
@@ -1388,7 +1387,7 @@ body {
 
 .header-navigation ul li a {
     color: #ed8404;
-    font-size: 15px;
+    font-size: 25px;
     line-height: 48px;
     transition: all .2s ease-in-out
 }
