@@ -1360,17 +1360,16 @@ body {
     grid-template-columns: 263px auto;
     position: fixed;
     padding: 0 72px;
-    min-width: 300px;
-    min-height: 60px;
-    background: rgba(255, 255, 255, .2);
-    background: linear-gradient(90deg, #c9c9c9 0%, #c9c9c9 100%);
+    min-width: 170px;
+    min-height: 30px;
+    background: #000000;
+    background: linear-gradient(90deg, #000000 0%, #000000 100%);
     border: none;
     border-radius: 1000px;
     box-shadow: 12px 12px 24px #101010;
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
     outline: none;
-    position: relative;
     padding: 10px;
 }
 
