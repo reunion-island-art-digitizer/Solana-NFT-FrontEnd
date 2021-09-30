@@ -1358,6 +1358,7 @@ body {
     display: grid;
     gap: var(--gutter);
     grid-template-columns: 263px auto;
+    position: fixed;
     padding: 0 72px
 }
 
