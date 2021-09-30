@@ -192,7 +192,7 @@
     background: linear-gradient(90deg, #e98e10 0%, #e98e10 100%);
     border: none;
     border-radius: 1000px;
-    box-shadow: 12px 12px 24px rgb(202 139 71 / 0,64);
+    box-shadow: 12px 12px 24px #e98e10;
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
     outline: none;
