@@ -1363,9 +1363,7 @@ body {
 
 .header-navigation ul {
     align-items: center;
-    background-color: #e98e10 50%;
-    display: flex;
-    position: fixed
+    display: flex
 }
 
 .header-navigation ul li {
@@ -1377,11 +1375,9 @@ body {
 }
 
 .header-navigation ul li a {
-    color: #221203;
+    color: #ed8404;
     font-size: 15px;
     line-height: 48px;
-    background-color: #e98e10 50%;
-    position: fixed;
     transition: all .2s ease-in-out
 }
 
@@ -1394,7 +1390,7 @@ body {
 }
 
 .header-navigation ul li a.button:hover {
-    color: #221203
+    color: #ed8404
 }
 
 @media screen and (max-width:1280px) {
