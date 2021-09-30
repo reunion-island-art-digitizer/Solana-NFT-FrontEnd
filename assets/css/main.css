@@ -1363,7 +1363,9 @@ body {
 
 .header-navigation ul {
     align-items: center;
+    background-color: darkgoldenrod 50%;
     display: flex;
+    position: fixed
 }
 
 .header-navigation ul li {
