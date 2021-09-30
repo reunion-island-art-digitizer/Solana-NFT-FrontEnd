@@ -51,12 +51,12 @@
                     </div>
                     <B><nav class="header-navigation" style="display: flex;">
                         <ul>
-                            <li><a href="RIAB">RIA Boys</a></li>
-                            <li><a href="SOLBalance">MINT</a></li>
-                            <li><a href="recipeCarousel">PREVIEW</a></li>
-                            <li><a href="roadmap">ROADMAP</a></li>
-                            <li><a href="faq">FAQ</a></li>
-                            <li><a href="team">TEAM</a></li>
+                            <li><a href="#RIAB">RIA Boys</a></li>
+                            <li><a href="#SOLBalance">MINT</a></li>
+                            <li><a href="#recipeCarousel">PREVIEW</a></li>
+                            <li><a href="#roadmap">ROADMAP</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#team">TEAM</a></li>
                         </ul>
                         <div style="display: flex;">
                               <i class="fas fa-cloud"></i>
@@ -74,7 +74,7 @@
             </div>
 
             <div class="main lunch-time" style="width: unset!important;">
-                <div id='content' style="">
+                <div id='Countdown' style="font-size: 20px;" color="black;">
                     <p style="font-size: 15px;">LOUNCH IN</p>
                     <section>
                         <ul <!-- Display the countdown timer in an element -->
@@ -94,10 +94,10 @@ var x = setInterval(function() {
   var distance = countDownDate - now;
 
   // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24)) style="font-size: 20px;" color="black;";
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))style="font-size: 20px;" color="black;";
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))style="font-size: 20px;" color="black;";
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000)style="font-size: 20px;" color="black;";
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24)) ;
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
