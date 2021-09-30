@@ -1314,7 +1314,7 @@ body {
 .header-container {
     margin: 0 auto;
     max-width: var(--contaiter);
-    width: 100%
+    width: 70%
 }
 
 .button {
@@ -1356,7 +1356,7 @@ body {
 .header-container {
     display: grid;
     gap: var(--gutter);
-    grid-template-columns: 30px auto;
+    grid-template-columns: 200px auto;
     position: fixed;
     padding: 0 72px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -1380,7 +1380,7 @@ body {
 .header-navigation ul li a {
     color: #ed8404;
     font-size: 15px;
-    line-height: 48px;
+    line-height: 30px;
     transition: all .2s ease-in-out
 }
 
