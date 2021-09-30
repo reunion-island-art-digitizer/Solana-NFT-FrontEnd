@@ -1363,7 +1363,7 @@ body {
 
 .header-navigation ul {
     align-items: center;
-    background-color: darkgoldenrod 50%;
+    background-color: #e98e10 50%;
     display: flex;
     position: fixed
 }
@@ -1380,13 +1380,13 @@ body {
     color: #221203;
     font-size: 15px;
     line-height: 48px;
-    background-color: darkgoldenrod 50%;
+    background-color: #e98e10 50%;
     position: fixed;
     transition: all .2s ease-in-out
 }
 
 .header-navigation ul li a:hover {
-    color: #e98e10
+    color: #ead696
 }
 
 .header-navigation ul li a.button:not(:hover) {
@@ -1409,22 +1409,7 @@ body {
     .header-navigation {
         position: fixed;
         display: block;
-        font-family: Stardos Stencil, sans-serif;
-        font-size: 20px;
-        text-transform: uppercase;
-        letter-spacing: 1.3px;
-        font-weight: 700;
-        color: #313133;
-        background: #e98e10;
-        background: linear-gradient(90deg, #e98e10 0%, #e98e10 100%);
-        border: none;
-        border-radius: 1000px;
-        box-shadow: 12px 12px 24px #e98e10;
-        transition: all 0.3s ease-in-out 0s;
-        cursor: pointer;
-        outline: none;
-        position: relative;
-        padding: 10px;
+        margin-top: 30px
     }
     .header-navigation li {
         display: none
