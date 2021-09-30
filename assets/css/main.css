@@ -183,7 +183,7 @@
     min-width: 300px;
     min-height: 60px;
     text-align: center;
-    font-family: Garamond, sans-serif; 
+    font-family: Tahoma, bold; 
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
@@ -1380,7 +1380,7 @@ body {
 
 .header-navigation ul li a {
     color: #ed8404;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 48px;
     transition: all .2s ease-in-out
 }
