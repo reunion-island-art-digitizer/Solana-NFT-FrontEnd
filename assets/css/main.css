@@ -1380,6 +1380,8 @@ body {
     color: #221203;
     font-size: 15px;
     line-height: 48px;
+    background-color: darkgoldenrod 50%;
+    position: fixed;
     transition: all .2s ease-in-out
 }
 
