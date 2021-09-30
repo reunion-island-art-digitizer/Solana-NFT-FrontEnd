@@ -183,7 +183,7 @@
     min-width: 300px;
     min-height: 60px;
     text-align: center;
-    font-family: 'Segoe UI', bold; 
+    font-family: 'Imprint MT Shadow'; 
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
@@ -1753,7 +1753,7 @@ body {
 
 .section-roadmap {
     margin: 0 auto;
-    max-width: 1170px
+    max-width: 1190px
 }
 
 .section-roadmap .roadmap {
