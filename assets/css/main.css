@@ -182,8 +182,9 @@
 .lunch-time {
     min-width: 300px;
     min-height: 60px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 20px;
+    text-align: center;
+    font-family: 'Nunito', bold;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
