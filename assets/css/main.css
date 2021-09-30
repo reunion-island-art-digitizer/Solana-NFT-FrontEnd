@@ -435,10 +435,10 @@ button:hover {
     button {
         padding: 5px 0px;
     }
-    /* .section-family .container .section-content {
+    .section-family .container .section-content {
         display: flex;
         flex-direction: column;
-    } */
+    } 
 }
 
 .swiper-container {
