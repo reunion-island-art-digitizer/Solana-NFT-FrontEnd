@@ -193,7 +193,6 @@
     background: linear-gradient(90deg, #e98e10 0%, #e98e10 100%);
     border: none;
     border-radius: 1000px;
-    box-shadow: 12px 12px 24px #e98e10;
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
     outline: none;
@@ -1357,10 +1356,10 @@ body {
 .header-container {
     display: grid;
     gap: var(--gutter);
-    grid-template-columns: 263px auto;
+    grid-template-columns: 150px auto;
     position: fixed;
     padding: 0 72px;
-    background: #000000 50%;
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 1000px;
 }
