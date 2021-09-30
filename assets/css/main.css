@@ -1375,14 +1375,14 @@ body {
 }
 
 .header-navigation ul li a {
-    color: #aaa;
+    color: #221203;
     font-size: 15px;
     line-height: 48px;
     transition: all .2s ease-in-out
 }
 
 .header-navigation ul li a:hover {
-    color: #ead696
+    color: #e98e10
 }
 
 .header-navigation ul li a.button:not(:hover) {
@@ -1390,7 +1390,7 @@ body {
 }
 
 .header-navigation ul li a.button:hover {
-    color: #101010
+    color: #221203
 }
 
 @media screen and (max-width:1280px) {
@@ -1403,6 +1403,7 @@ body {
         padding: 0 16px
     }
     .header-navigation {
+        position: fixed;
         display: block;
         margin-top: 30px
     }
