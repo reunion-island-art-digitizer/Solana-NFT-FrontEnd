@@ -183,12 +183,12 @@
     min-width: 300px;
     min-height: 60px;
     text-align: center;
-    font-family: 'Imprint MT Shadow'; 
+    font-family: Impact; 
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
-    color: #313133;
+    color: #fbf7cd;
     background: #e98e10;
     background: linear-gradient(90deg, #e98e10 0%, #e98e10 100%);
     border: none;
@@ -1796,7 +1796,7 @@ body {
     height: 2px;
     position: absolute;
     top: calc(50% - 1px);
-    width: 50px
+    width: 60px
 }
 
 .section-roadmap .roadmap span:before {
