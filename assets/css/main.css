@@ -1356,7 +1356,7 @@ body {
 .header-container {
     display: grid;
     gap: var(--gutter);
-    grid-template-columns: 150px auto;
+    grid-template-columns: 30px auto;
     position: fixed;
     padding: 0 72px;
     background-color: rgba(0, 0, 0, 0.5);
