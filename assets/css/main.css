@@ -435,10 +435,10 @@ button:hover {
     button {
         padding: 5px 0px;
     }
-    .section-family .container .section-content {
+    /* .section-family .container .section-content {
         display: flex;
         flex-direction: column;
-    } 
+    } */
 }
 
 .swiper-container {
@@ -2006,7 +2006,7 @@ details>summary {
     margin-top: 22px
 }
 
-.section-gang .raccoons {
+.section-gang .RIABoys {
     display: grid;
     gap: 15px 30px;
     grid-template-columns: repeat(4, 1fr);
@@ -2014,18 +2014,18 @@ details>summary {
     padding: 0 72px
 }
 
-.section-gang .raccoons .raccoon img {
+.section-gang .RIABoys .raccoon img {
     display: block;
     margin-bottom: 20px
 }
 
-.section-gang .raccoons .raccoon b,
-.section-gang .raccoons .raccoon span {
+.section-gang .RIABoys .raccoon b,
+.section-gang .RIABoys .raccoon span {
     display: block;
     text-align: center
 }
 
-.section-gang .raccoons .raccoon b {
+.section-gang .RIABoys .raccoon b {
     color: #988036;
     font-family: Stardos Stencil, sans-serif;
     font-size: 17px;
@@ -2034,14 +2034,14 @@ details>summary {
     text-transform: uppercase
 }
 
-.section-gang .raccoons .raccoon span {
+.section-gang .RIABoys .raccoon span {
     color: #c9c9c9;
     font-size: 14px;
     line-height: 24px
 }
 
 @media screen and (max-width:1280px) {
-    .section-gang .raccoons {
+    .section-gang .RIABoys {
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
         padding: 0
@@ -2049,14 +2049,14 @@ details>summary {
 }
 
 @media screen and (max-width:900px) {
-    .section-gang .raccoons {
+    .section-gang .RIABoys {
         grid-template-columns: repeat(3, 1fr);
         justify-items: center
     }
 }
 
 @media screen and (max-width:620px) {
-    .section-gang .raccoons {
+    .section-gang .RIABoys {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center
     }
