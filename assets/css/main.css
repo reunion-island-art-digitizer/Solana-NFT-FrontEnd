@@ -32,8 +32,6 @@
 .menu-demo2, .menu-demo2 ul {
     padding: 0;
     margin: 0;
-    position fixed;
-    right: 20%;
     list-style: none;
     text-align: center;
 }
@@ -41,6 +39,7 @@
 .menu-demo2 li {
     display: inline-block;
     position: fixed;
+    right: 20%;
     border-radius: 8px 8px 0 0;
 }
 
