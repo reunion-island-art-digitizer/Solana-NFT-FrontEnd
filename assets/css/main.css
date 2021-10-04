@@ -277,6 +277,7 @@
     touch-action: manipulation;
     z-index: 1;
     align-items: center;
+    left: 40%;
 }
 
 .lunch-time:before {
