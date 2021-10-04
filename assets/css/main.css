@@ -257,7 +257,6 @@
 .lunch-time {
     min-width: 300px;
     min-height: 60px;
-    text-align: center;
     font-family: Stardos Stencil, sans-serif;
     font-size: 25px;
     text-transform: uppercase;
@@ -266,15 +265,44 @@
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    background: #e98e10;
-    background: linear-gradient(90deg, #e98e10 0%, #e98e10 100%);
-    border: none;
-    border-radius: 1000px;
     transition: all 0.3s ease-in-out 0s;
+    background-color: #ed8404;
+    border: 0;
+    border-radius: 56px;
+    color: #fff;
     cursor: pointer;
-    outline: none;
+    display: inline-block;
+    font-weight: 600;
+    outline: 0;
+    padding: 4px 28px;
+    padding: 16px 21px;
     position: relative;
-    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    z-index: 1;
+}
+
+.lunch-time:before {
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: "";
+    height: 50%;
+    left: 4%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    transition: all .3s;
+    width: 92%;
+}
+
+.lunch-time:hover {
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
 }
 
 .lunch-time::after {
