@@ -264,8 +264,6 @@
     font-weight: 700;
     color: #fff;
     cursor: pointer;
-    display: inline-block;
-    transition: all 0.3s ease-in-out 0s;
     background-color: #ed8404;
     border: 0;
     border-radius: 56px;
@@ -289,10 +287,10 @@
 .lunch-time:before {
     background-color: initial;
     background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
-    border-radius: 125px;
+    border-radius: 56px;
     content: "";
     height: 50%;
-    left: 4%;
+    left: 0;
     opacity: .5;
     position: absolute;
     top: 0;
@@ -302,7 +300,7 @@
 
 .lunch-time:hover {
     box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
-    transform: scale(1.01);
+    transform: scale(1.05);
 }
 
 @keyframes ring {
