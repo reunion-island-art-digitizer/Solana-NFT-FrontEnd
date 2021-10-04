@@ -276,7 +276,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     z-index: 1;
-    left: 30%;
+    text-align: center;
 }
 
 .lunch-time:before {
@@ -291,7 +291,7 @@
     transition: all .3s;
     width: 92%;
     padding: 0 auto;
-    border-radius: 56px;
+    text-align: center;
 }
 
 .lunch-time:hover {
