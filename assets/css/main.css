@@ -270,7 +270,7 @@
     border-radius: 56px;
     color: #fff;
     cursor: pointer;
-    display: inline-block;
+    display: flex;
     font-weight: 600;
     outline: 0;
     padding: 4px 28px;
@@ -1521,7 +1521,7 @@ body {
     background-position: top;
     background-repeat: no-repeat;
     height: 820px;
-    padding: 300px 50px 0
+    padding: 300px 70px 0
 }
 
 .home-section .section-content.section-content--sold,
