@@ -38,7 +38,7 @@
 
 .menu-demo2 li {
     display: inline-block;
-    position: fixed;
+    position: relative;
     border-radius: 8px 8px 8px 8px;
 }
 
