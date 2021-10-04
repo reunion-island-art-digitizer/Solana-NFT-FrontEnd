@@ -276,18 +276,18 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     z-index: 1;
-    padding: 0 auto;
+    left: 50%
 }
 
 .lunch-time:before {
     background-color: initial;
     background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
-    align-items: center;
     position: absolute;
     content: "";
-    height: 50%;
+    height: 54%;
     opacity: .5;
     top: 0;
+    left: 50%;
     transition: all .3s;
     width: 92%;
     padding: 0 auto;
