@@ -1357,7 +1357,7 @@ body {
     display: grid;
     gap: var(--gutter);
     grid-template-columns: 30px auto;
-    position: fixed;
+    position: relative;
     padding: 0 72px;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
