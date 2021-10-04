@@ -1401,7 +1401,7 @@ body {
 .header-container {
     margin: 0 auto;
     max-width: var(--contaiter);
-    width: 100%
+    width: 100%;
 }
 
 .button {
@@ -1434,7 +1434,7 @@ body {
 .header {
     left: 0;
     padding: 30px 0 25px;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 2
