@@ -1,4 +1,4 @@
-import './App.css';
+import './assets/js/App.css';
 import { useState } from 'react';
 import { Connection, PublicKey } from '@solana/web3.js';
 import {

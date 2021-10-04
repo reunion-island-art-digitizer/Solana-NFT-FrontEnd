@@ -305,20 +305,6 @@
     transform: scale(1.05);
 }
 
-.lunch-time::after {
-    content: '';
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    border: none;
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: ring 1.5s infinite;
-}
-
 @keyframes ring {
     0% {
         width: 30px;
