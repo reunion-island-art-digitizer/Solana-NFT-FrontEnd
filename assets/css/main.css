@@ -269,14 +269,14 @@
     border-radius: 56px;
     display: inline-block;
     outline: 0;
-    position: absolute;
+    position: relative;
     text-decoration: none;
     transition: all .3s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     z-index: 1;
-    align-items: center;
+    padding: 0 auto;
 }
 
 .lunch-time:before {
@@ -290,6 +290,8 @@
     top: 0;
     transition: all .3s;
     width: 92%;
+    padding: 0 auto;
+    border-radius: 56px;
 }
 
 .lunch-time:hover {
