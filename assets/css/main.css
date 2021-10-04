@@ -276,7 +276,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     z-index: 1;
-    left: 50%
+    left: 44%;
 }
 
 .lunch-time:before {
@@ -287,7 +287,7 @@
     height: 54%;
     opacity: .5;
     top: 0;
-    left: 50%;
+    left: 48%;
     transition: all .3s;
     width: 92%;
     padding: 0 auto;
