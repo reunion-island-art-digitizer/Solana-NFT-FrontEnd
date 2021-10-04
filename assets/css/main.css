@@ -31,7 +31,7 @@
 }
 .boutonmenuprincipal {
     position: fixed;
-    right: auto;
+    right: 20%;
     background-color: #e98e10;
     color: white;
     border: none;
@@ -48,14 +48,13 @@
 .dropdown {
     position: fixed;
     padding: 20px;
-    right: auto;
     display: inline-block;
 }
 
 .dropdown-child {
     display: none;
     background-color: #e98e10;
-    min-width: 50px;
+    min-width: 30px;
 }
 
     .dropdown-child a {
@@ -226,8 +225,9 @@
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
-    color: #fbf7cd;
+    color: #fff;
     cursor: pointer;
+    display: inline-block;
     background: #e98e10;
     background: linear-gradient(90deg, #e98e10 0%, #e98e10 100%);
     border: none;
@@ -244,7 +244,7 @@
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    border: 6px solid #e98e10;
+    border: none;
     position: absolute;
     z-index: -1;
     top: 50%;
