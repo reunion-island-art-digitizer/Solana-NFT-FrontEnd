@@ -270,7 +270,7 @@
     border-radius: 56px;
     color: #fff;
     cursor: pointer;
-    display: flex;
+    display: inline-block;
     font-weight: 600;
     outline: 0;
     padding: 4px 28px;
@@ -283,6 +283,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     z-index: 1;
+    justify-content: center;
 }
 
 .lunch-time:before {
