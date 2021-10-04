@@ -1443,9 +1443,7 @@ body {
 .header-container {
     display: grid;
     gap: var(--gutter);
-    grid-template-columns: 30px auto;
     position: relative;
-    padding: 0 72px;
 }
 
 .header-navigation ul {
