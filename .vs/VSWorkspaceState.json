@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.git",
     "\\assets",
     "\\assets\\css",
     "\\assets\\js"
   ],
-  "SelectedNode": "\\.git\\objects",
   "PreviewInSolutionExplorer": false
 }
