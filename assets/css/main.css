@@ -269,7 +269,7 @@
     border-radius: 56px;
     display: inline-block;
     outline: 0;
-    position: relative;
+    position: absolute;
     text-decoration: none;
     transition: all .3s;
     user-select: none;
@@ -286,7 +286,6 @@
     position: absolute;
     content: "";
     height: 50%;
-    left: 44%;
     opacity: .5;
     top: 0;
     transition: all .3s;
