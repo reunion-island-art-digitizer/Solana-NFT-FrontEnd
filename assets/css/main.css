@@ -59,10 +59,7 @@
 }
 
 .menu-demo2 ul {
-    position: fixed;
-    z-index: 1000;
     max-height: 0;
-    right: 20%;
     overflow: hidden;
     -moz-transition: .8s all .3s;
     -webkit-transition: .8s all .3s;
