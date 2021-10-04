@@ -38,8 +38,8 @@
 
 .menu-demo2 li {
     display: inline-block;
-    position: relative;
-    border-radius: 8px 8px 8px 8px;
+    position: fixed;
+    border-radius: 8px 8px 0 0;
 }
 
 .menu-demo2 ul li {
