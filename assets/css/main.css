@@ -284,6 +284,7 @@
     background-color: initial;
     background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
     border-radius: 56px;
+    position: absolute;
     content: "";
     height: 50%;
     left: 4%;
