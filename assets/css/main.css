@@ -34,9 +34,9 @@
     margin: 0;
     list-style: none;
     text-align: center;
-    position: fixed;
+    position: relative;
     z-index: 1000;
-    right: 20%;
+    right: 0;
 }
 
 .menu-demo2 li {
