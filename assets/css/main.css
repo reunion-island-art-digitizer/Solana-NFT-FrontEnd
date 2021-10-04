@@ -1433,10 +1433,8 @@ body {
 
 .header {
     left: 0;
-    margin: 0;
     position: fixed;
     z-index: 2;
-    position: relative;
 }
 
 .header-container {
