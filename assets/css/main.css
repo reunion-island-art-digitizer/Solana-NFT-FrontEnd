@@ -37,7 +37,8 @@
     position: -webkit-sticky;
     position: sticky;
     z-index: 1000;
-    right: 0;
+    right: 20%;
+    top: 20px;
 }
 
 .menu-demo2 li {
