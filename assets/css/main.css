@@ -34,7 +34,6 @@
     margin: 0;
     list-style: none;
     text-align: center;
-    position: -webkit-sticky;
     position: sticky;
     z-index: 1000;
     right: 20%;
@@ -53,6 +52,10 @@
 
 .menu-demo2 ul li:hover {
     border-radius: 0;
+}
+
+.menu-demo2 ul li:first-child {
+    border-radius: 8px 8px 0 0;
 }
 
 .menu-demo2 ul li:nth-child(6) {
