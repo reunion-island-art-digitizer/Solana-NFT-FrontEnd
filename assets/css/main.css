@@ -255,7 +255,6 @@
 }
 
 .lunch-time {
-    margin: 0 auto;
     min-width: 300px;
     min-height: 60px;
     font-family: Stardos Stencil, sans-serif;
@@ -274,7 +273,6 @@
     font-weight: 600;
     outline: 0;
     position: relative;
-    text-align: center;
     text-decoration: none;
     transition: all .3s;
     user-select: none;
