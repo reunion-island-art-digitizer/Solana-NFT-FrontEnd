@@ -30,7 +30,7 @@
     color: #ead696;
 }
 .menu-demo2, .menu-demo2 ul {
-    padding: 10px 0 0;
+    padding: 0;
     margin: 0;
     list-style: none;
     text-align: center;
@@ -1433,6 +1433,7 @@ body {
 
 .header {
     left: 0;
+    margin: 0;
     position: fixed;
     z-index: 2;
     position: relative;
