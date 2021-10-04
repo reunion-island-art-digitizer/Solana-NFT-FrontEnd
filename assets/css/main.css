@@ -34,7 +34,7 @@
     margin: 0;
     list-style: none;
     text-align: center;
-    position: sticky;
+    position: absolute;
     z-index: 1000;
     right: 20%;
     top: 20px;
