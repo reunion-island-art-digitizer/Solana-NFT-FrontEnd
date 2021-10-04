@@ -279,7 +279,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     z-index: 1;
-    text-align: center;
+    align-items: center;
 }
 
 .lunch-time:before {
@@ -1446,9 +1446,6 @@ body {
     grid-template-columns: 30px auto;
     position: relative;
     padding: 0 72px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 1000px;
 }
 
 .header-navigation ul {
