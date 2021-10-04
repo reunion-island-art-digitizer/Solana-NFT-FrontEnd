@@ -277,13 +277,12 @@
     touch-action: manipulation;
     z-index: 1;
     align-items: center;
-    left: 40%;
 }
 
 .lunch-time:before {
     background-color: initial;
     background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
-    border-radius: 56px;
+    align-items: center;
     position: absolute;
     content: "";
     height: 50%;
