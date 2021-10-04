@@ -30,13 +30,15 @@
     color: #ead696;
 }
 .boutonmenuprincipal {
-    background-color: #e83737;
+    position: fixed;
+    right: 0;
+    background-color: #e98e10;
     color: white;
     border: none;
     cursor: pointer;
     padding: 20px;
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 15px;
 }
 
     .boutonmenuprincipal:hover {
