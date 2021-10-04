@@ -255,7 +255,6 @@
 }
 
 .lunch-time {
-    padding: 0 30%;
     min-width: 300px;
     min-height: 60px;
     font-family: Stardos Stencil, sans-serif;
@@ -294,6 +293,7 @@
     top: 0;
     transition: all .3s;
     width: 92%;
+    justify-content: center;
 }
 
 .lunch-time:hover {
