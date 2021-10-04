@@ -1433,17 +1433,14 @@ body {
 
 .header {
     left: 0;
-    padding: 30px 0 25px;
     position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2
+    z-index: 2;
+    position: relative;
 }
 
 .header-container {
     display: grid;
     gap: var(--gutter);
-    position: relative;
 }
 
 .header-navigation ul {
