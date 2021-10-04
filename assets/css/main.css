@@ -30,8 +30,6 @@
     color: #ead696;
 }
 .boutonmenuprincipal {
-    position: fixed;
-    right: 20%;
     background-color: #e98e10;
     color: white;
     border: none;
@@ -47,13 +45,16 @@
 
 .dropdown {
     position: fixed;
-    padding: 20px;
     display: inline-block;
+    right: 20%;
 }
 
 .dropdown-child {
     display: none;
     background-color: #e98e10;
+    color: white;
+    border: none;
+    cursor: pointer;
     min-width: 30px;
 }
 
