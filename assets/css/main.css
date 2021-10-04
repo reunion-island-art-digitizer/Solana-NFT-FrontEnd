@@ -227,6 +227,7 @@
     letter-spacing: 1.3px;
     font-weight: 700;
     color: #fbf7cd;
+    cursor: pointer;
     background: #e98e10;
     background: linear-gradient(90deg, #e98e10 0%, #e98e10 100%);
     border: none;
