@@ -34,69 +34,64 @@ window.addEventListener('load', function() {
 
 
 $(".connectbtn").on("click", async function() {
-    import { useWalletModal } from "@solana/wallet-adapter-ant-design";
-    import { useWallet } from "@solana/wallet-adapter-react";
-    import { Button, Dropdown, Menu } from "antd";
-    import { ButtonProps } from "antd/lib/button";
-    import React, { useCallback } from "react";
-    import { LABELS } from "../../constants";
+    import { HashRouter, Route, Switch } from "react-router-dom";
+    import React, { useMemo } from "react";
+    import { WalletProvider } from "@solana/wallet-adapter-react";
+    import { ConnectionProvider } from "./src/contexts/connection";
+    import { AccountsProvider } from "./src/contexts/accounts";
+    import { MarketProvider } from "./src/contexts/market";
+    import { AppLayout } from "./src/components/Layout";
 
-    export interface ConnectButtonProps
-        extends ButtonProps,
-        React.RefAttributes<HTMLElement> {
-        allowWalletChange?: boolean;
-    }
+    import { FaucetView, HomeView } from "./src/views";
+    import {
+        getLedgerWallet,
+        getMathWallet,
+        getPhantomWallet,
+        getSolflareWallet,
+        getSolletWallet,
+        getSolongWallet,
+        getTorusWallet,
+    } from "@solana/wallet-adapter-wallets";
 
-    export const ConnectButton = (props: ConnectButtonProps) => {
-        const { setVisible } = useWalletModal();
-
-        const { connected, connect, select, wallet, wallets } = useWallet();
-        const { onClick, children, disabled, allowWalletChange, ...rest } = props;
-
-        const handleChangeWalletButtonClick: React.MouseEventHandler<HTMLElement> = useCallback(
-            (event) => {
-                if (connected) {
-                    onClick?.(event);
-                    return;
-                }
-                setVisible(true);
-            },
-            [setVisible, onClick, connected]
+    export function Routes() {
+        const wallets = useMemo(
+            () => [
+                getPhantomWallet(),
+                getSolflareWallet(),
+                getTorusWallet({
+                    options: {
+                        // TODO: Get your own tor.us wallet client Id
+                        clientId:
+                            "BOM5Cl7PXgE9Ylq1Z1tqzhpydY0RVr8k90QQ85N7AKI5QGSrr9iDC-3rvmy0K_hF0JfpLMiXoDhta68JwcxS1LQ",
+                    },
+                }),
+                getLedgerWallet(),
+                getSolongWallet(),
+                getMathWallet(),
+                getSolletWallet(),
+            ],
+            []
         );
-
-        // only show if wallet selected or user connected
-        const menu = (
-            <Menu>
-                {wallets.map((wallet) => (
-                    <Menu.Item key={wallet.name} onClick={() => select(wallet.name)}>
-                        Change Wallet to {wallet.name}
-                    </Menu.Item>
-                ))}
-            </Menu>
-        );
-
-        if (!wallet || !allowWalletChange) {
-            return (
-                <Button
-                    {...rest}
-                    onClick={handleChangeWalletButtonClick}
-                    disabled={connected && disabled}
-                >
-                    {connected ? props.children : LABELS.CONNECT_LABEL}
-                </Button>
-            );
-        }
 
         return (
-            <Dropdown.Button
-                onClick={connected ? onClick : connect}
-                disabled={connected && disabled}
-                overlay={menu}
-            >
-                {LABELS.CONNECT_LABEL}
-            </Dropdown.Button>
+            <HashRouter basename={"/"}>
+                <ConnectionProvider>
+                    <WalletProvider wallets={wallets} autoConnect>
+                        <AccountsProvider>
+                            <MarketProvider>
+                                <AppLayout>
+                                    <Switch>
+                                        <Route exact path="/" component={() => <HomeView />} />
+                                        <Route exact path="/faucet" children={<FaucetView />} />
+                                    </Switch>
+                                </AppLayout>
+                            </MarketProvider>
+                        </AccountsProvider>
+                    </WalletProvider>
+                </ConnectionProvider>
+            </HashRouter>
         );
-    };
+    }
 
     $("#solBalance").text(result);
     $(".connectbtn").text("CONNECTED");
