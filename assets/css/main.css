@@ -276,7 +276,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     z-index: 1;
-    left: 42%;
+    left: 30%;
 }
 
 .lunch-time:before {
@@ -284,7 +284,7 @@
     background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
     position: absolute;
     content: "";
-    height: 54%;
+    height: 34%;
     opacity: .5;
     top: 0;
     left: 44%;
