@@ -31,7 +31,7 @@
 }
 .boutonmenuprincipal {
     position: fixed;
-    right: 0;
+    right: auto;
     background-color: #e98e10;
     color: white;
     border: none;
@@ -42,17 +42,19 @@
 }
 
     .boutonmenuprincipal:hover {
-        background-color: #ff4444;
+        background-color: #e98e10;
     }
 
 .dropdown {
-    position: relative;
+    position: fixed;
+    padding: 20px;
+    right: auto;
     display: inline-block;
 }
 
 .dropdown-child {
     display: none;
-    background-color: #f28c8c;
+    background-color: #e98e10;
     min-width: 50px;
 }
 
