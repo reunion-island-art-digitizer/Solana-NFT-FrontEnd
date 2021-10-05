@@ -264,8 +264,8 @@
     font-weight: 700;
     color: #fff;
     cursor: pointer;
-    background-color: #ed8404;
-    background-image: -webkit-linear-gradient(top, #fff 0%, #fff 100%);
+    background-color: #F6AD1A;
+    background-image: -webkit-linear-gradient(top, #F6AD1A 0%, #9F391A 100%);
     background-image: linear-gradient(to bottom, #F6AD1A 0%, #9F391A 100%);
     border: 0;
     border-radius: 56px;
@@ -297,7 +297,7 @@
 }
 
 .lunch-time:hover {
-    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    box-shadow: #F6AD1A 0 3px 15px inset, #F6AD1A 0 3px 5px, #F6AD1A 0 10px 13px;
     transform: scale(1.05);
 }
 
