@@ -3,8 +3,11 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\assets\\js"
+    "\\assets\\images",
+    "\\assets\\js",
+    "\\src\\views",
+    "\\src\\views\\home"
   ],
-  "SelectedNode": "\\assets\\css\\main.css",
+  "SelectedNode": "\\assets\\images\\discord.png",
   "PreviewInSolutionExplorer": false
 }
