@@ -34,12 +34,75 @@ window.addEventListener('load', function () {
 
 
 $(".connectbtn").on("click", async function () {
-    window.solana.connect()
-    window.solana.on("connect", () => console.log("connected"))
+    import { Connection, clusterApiUrl } from "@solana/web3.js";
 
-    window.solana.publicKey // wallet's publicKey
-    window.solana.connected // true or false
-    window.solana.network // mainnet-beta or testnet
+    const networks = {
+        mainnet: {
+            url: "https://solana-api.projectserum.com",
+            displayName: "Mainnet Beta",
+        },
+        devnet: { url: clusterApiUrl("devnet"), displayName: "Devnet" },
+        testnet: { url: clusterApiUrl("testnet"), displayName: "Testnet" },
+    };
+
+    const solanaNetwork = networks.devnet;
+    const connection = new Connection(solanaNetwork.url);
+
+    useEffect(() => {
+        setLoading(true)
+        const sdkInstance = new OpenLogin({
+            clientId: "YOUR_PROJECT_ID",
+            network: "testnet"
+        });
+        async function initializeOpenlogin() {
+            await sdkInstance.init();
+            if (sdkInstance.privKey) {
+      // qpp has access ot private key now
+      ...
+      ...
+    }
+    setSdk(sdkInstance);
+setLoading(false)
+  }
+initializeOpenlogin();
+}, []);
+
+async function handleLogin() {
+    setLoading(true);
+    try {
+        const privKey = await openlogin.login({
+            loginProvider: "google",
+            redirectUrl: `${window.origin}`,
+        });
+        const solanaPrivateKey = getSolanaPrivateKey(privKey);
+        await getAccountInfo(solanaNetwork.url, solanaPrivateKey);
+        setLoading(false);
+    } catch (error) {
+        console.log("error", error);
+        setLoading(false);
+    }
+}
+
+const getSolanaPrivateKey = (openloginKey) => {
+    const { sk } = getED25519Key(openloginKey);
+    return sk;
+};
+
+const getAccountInfo = async (connectionUrl, solanaPrivateKey) => {
+    const account = new Account(solanaPrivateKey);
+    const connection = new Connection(connectionUrl);
+    const accountInfo = await connection.getAccountInfo(account.publicKey);
+    setPrivateKey(bs58.encode(account.secretKey));
+    setUserAccount(account);
+    setUserAccountInfo(accountInfo);
+    return accountInfo;
+};
+
+const handleLogout = async () => {
+    setLoading(true);
+    await openlogin.logout();
+    setLoading(false);
+};
     $("#ethBalance").text(result);
     $(".connectbtn").text("CONNECTED");
 
