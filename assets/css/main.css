@@ -1745,7 +1745,7 @@ body {
     font-size: 34px;
     font-weight: 700;
     line-height: 28pt;
-    margin-bottom: 36px;
+    margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase
 }
@@ -1819,7 +1819,7 @@ body {
     .section .section-content .cool-raccoon>h3+p {
         font-size: 12px;
         line-height: 15px;
-        margin: 16px auto auto
+        margin: 10px auto auto
     }
     .section {
         padding: 16px
