@@ -265,6 +265,8 @@
     color: #fff;
     cursor: pointer;
     background-color: #ed8404;
+    background-image: -webkit-linear-gradient(top, #fff 0%, #fff 100%);
+    background-image: linear-gradient(to bottom, #F6AD1A 0%, #9F391A 100%);
     border: 0;
     border-radius: 56px;
     display: inline-block;
@@ -276,10 +278,10 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     z-index: 1;
-    left: 45%;
+    left: 50%;
 }
 
-.lunch-time:before {
+//h-time:before {
     background-color: initial;
     background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
     border-radius: 56px;
