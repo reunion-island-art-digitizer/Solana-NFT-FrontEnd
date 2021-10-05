@@ -1,13 +1,13 @@
 // import web3 from 'web3'
-const totalAmount = 10000;
+const totalAmount = 6666;
 let mintedAmount = 198;
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
 
     $(".connectbtn").text("CONNECT");
     $(".mintedAmunt").text(restAmount + '/' + totalAmount);
     // Load WEB3
-    // Check wether it's already injected by something else (like Phantom or Parity Chrome plugin)
+    // Check wether it's already injected by something else (like Metamask or Parity Chrome plugin)
     // if (typeof web3 !== 'undefined') {
     //     window.web3 = new Web3(web3.currentProvider);
 
@@ -40,87 +40,24 @@ $(".connectbtn").on("click", async function () {
     window.solana.publicKey // wallet's publicKey
     window.solana.connected // true or false
     window.solana.network // mainnet-beta or testnet
-    $("#solBalance").text(result);
+    $("#ethBalance").text(result);
     $(".connectbtn").text("CONNECTED");
 
 })
-$("#nftBuy").on("click", function() {
+$("#nftBuy").on("click", function () {
 
-    // Generate a new wallet keypair and airdrop SOL
-    var fromWallet = web3.Keypair.generate();
-    var fromAirdropSignature = await connection.requestAirdrop(
-        fromWallet.publicKey,
-        web3.LAMPORTS_PER_SOL,
-    );
-    //wait for airdrop confirmation
-    await connection.confirmTransaction(fromAirdropSignature);
-
-    //create new token mint
-    let mint = await splToken.Token.createMint(
-        connection,
-        fromWallet,
-        fromWallet.publicKey,
-        null,
-        9,
-        splToken.TOKEN_PROGRAM_ID,
-    );
-
-    //get the token account of the fromWallet Solana address, if it does not exist, create it
-    let fromTokenAccount = await mint.getOrCreateAssociatedAccountInfo(
-        fromWallet.publicKey,
-    );
-    // Generate a new wallet to receive newly minted token
-    var toWallet = web3.Keypair.generate();
-
-    //get the token account of the toWallet Solana address, if it does not exist, create it
-    var toTokenAccount = await mint.getOrCreateAssociatedAccountInfo(
-        toWallet.publicKey,
-    );
-    /minting 1 new token to the "fromTokenAccount" account we just returned/created
-    await mint.mintTo(
-        fromTokenAccount.address, //who it goes to
-        fromWallet.publicKey, // minting authority
-        [], // multisig
-        1000000000, // how many
-    );
-
-    await mint.setAuthority(
-        mint.publicKey,
-        null,
-        "MintTokens",
-        fromWallet.publicKey,
-        []
-    )
-
-    // Add token transfer instructions to transaction
-    var transaction = new web3.Transaction().add(
-        splToken.Token.createTransferInstruction(
-            splToken.TOKEN_PROGRAM_ID,
-            fromTokenAccount.address,
-            toTokenAccount.address,
-            fromWallet.publicKey,
-            [],
-            1,
-        ),
-    );
-
-    // Sign transaction, broadcast, and confirm
-    var signature = await web3.sendAndConfirmTransaction(
-        connection,
-        transaction,
-        [fromWallet],
-        { commitment: 'confirmed' },
-    );
-    console.log('SIGNATURE', signature);
+    let restAmount = 2000;
+    let mintAmount = $("#mintAmount").val();
+    let cost = 0.0017;
     if (mintAmount > restAmount) {
         $("#nftBut").text("BUY");
-        $("#nftBut").attr(onclick, "window.location.href='https://Solsea';");
+        $("#nftBut").attr(onclick, "window.location.href='https://Opensea.io';");
         $("#mintAmount").val("0");
         $(".mintedAmunt").text("SOLD OUT");
 
 
     } else {
-        $("#nftBut").text("SOLSEA");
+        $("#nftBut").text("OPENSEA");
         $("#nftBut").removeAttr("onclick");
         console.log(parseFloat(cost) * parseInt(mintAmount));
         $(".nftCost").text(parseFloat(cost) * parseInt(mintAmount));
