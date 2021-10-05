@@ -1,38 +1,3 @@
-// import web3 from 'web3'
-const totalAmount = 6666;
-let mintedAmount = 198;
-
-window.addEventListener('load', function () {
-
-    $(".connectbtn").text("CONNECT");
-    $(".mintedAmunt").text(restAmount + '/' + totalAmount);
-    // Load WEB3
-    // Check wether it's already injected by something else (like Metamask or Parity Chrome plugin)
-    // if (typeof web3 !== 'undefined') {
-    //     window.web3 = new Web3(web3.currentProvider);
-
-    //     // Or connect to a node
-    // } else {
-    //     window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-    // }
-
-    // // Check the connection
-    // // if (!window.web3.isConnected()) {
-    // //     console.error("Not connected");
-
-    // // }
-    // window.web3.eth.getAccounts().then(result => { console.log(result) });
-    // // console.log(result);
-    // var accountInterval = setInterval(function() {
-    //     if (web3.eth.accounts[0] !== account) {
-    //         account = web3.eth.accounts[0];
-    //         document.getElementById("address").innerHTML = account;
-    //     }
-    // }, 100);
-
-});
-
-
 $(".connectbtn").on("click", async function () {
     import { Connection, clusterApiUrl } from "@solana/web3.js";
 
