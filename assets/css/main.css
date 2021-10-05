@@ -1836,9 +1836,9 @@ body {
 
 .section-roadmap .roadmap {
     display: grid;
-    grid-template-columns: repeat(5, 2fr);
+    grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
-    padding: 0 45px
+    padding: 0 0 0
 }
 
 .section-roadmap .roadmap div {
