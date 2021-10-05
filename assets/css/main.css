@@ -282,14 +282,15 @@
 .lunch-time:before {
     background-color: initial;
     background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
-    position: absolute;
+    border-radius: 56px;
+    position: relative;
     content: "";
     height: 34%;
     opacity: .5;
     top: 0;
     left: 42%;
     transition: all .3s;
-    width: 92%;s
+    width: 92%;
 }
 
 .lunch-time:hover {
