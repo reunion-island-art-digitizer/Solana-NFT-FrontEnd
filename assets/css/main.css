@@ -279,6 +279,7 @@
     touch-action: manipulation;
     z-index: 1;
     left: 43%;
+    justify-content: center;
 }
 
 //h-time:before {
@@ -1835,9 +1836,9 @@ body {
 
 .section-roadmap .roadmap {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, fr);
     justify-content: space-between;
-    padding: 0 72px
+    padding: 0 45px
 }
 
 .section-roadmap .roadmap div {
