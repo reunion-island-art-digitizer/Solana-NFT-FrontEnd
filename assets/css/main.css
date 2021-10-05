@@ -522,11 +522,11 @@ button:hover {
     button {
         padding: 5px 0px;
     }
-    /* .section-family .container .section-content {
+.section-family .container .section-content {
         display: flex;
         flex-direction: column;
-    } */
 }
+
 
 .swiper-container {
     margin-left: auto;
@@ -1724,7 +1724,7 @@ body {
 }
 
 .section {
-    padding: 67px 0;
+    padding: 40px 0;
     position: relative
 }
 
